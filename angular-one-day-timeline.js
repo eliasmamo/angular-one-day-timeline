@@ -71,11 +71,4 @@ angular.module('angular-one-day-timeline', [])
 		},
 		template:template
 	};
-})
-.filter('minutesToTime', function ($sce) {
-	return function (val) {
-		debugger;
-		return $sce.trustAsHtml(val);
-	}
 });
-;
