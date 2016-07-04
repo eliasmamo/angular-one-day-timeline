@@ -37,12 +37,24 @@ angular.module('angular-one-day-timeline', [])
 
     	$scope.calculatePeriodStyles = function () {
     		if ($scope.start && $scope.end) {
-	    		calculatePercent = function (time) {
+
+    			calculatePercentFromMinutes = function (minutes) {
+    				return (minutes * 10) / 144;
+    			}
+
+	    		calculatePercentFromTimeString = function (time) {
 			      return 100/24 * (parseInt(time.split(':')[0]) + (10/6 * parseInt(time.split(':')[1]))/100);
 			    };
+
+			    detectValueAndCalculatePercent = function (val) {
+			    	if (/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(val) ) {
+    					return calculatePercentFromTimeString(val);
+    				}
+    				return calculatePercentFromMinutes(val);
+			    }
 			    
-			    var left  = calculatePercent($scope.start);
-			    var width = calculatePercent($scope.end) - left;
+			    var left  = detectValueAndCalculatePercent($scope.start);
+			    var width = detectValueAndCalculatePercent($scope.end) - left;
 
 	    		return 'left:' + left + '%; width:' + width + '%';
     		}
@@ -59,4 +71,11 @@ angular.module('angular-one-day-timeline', [])
 		},
 		template:template
 	};
+})
+.filter('minutesToTime', function ($sce) {
+	return function (val) {
+		debugger;
+		return $sce.trustAsHtml(val);
+	}
 });
+;
