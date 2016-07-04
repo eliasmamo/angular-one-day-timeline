@@ -1,18 +1,18 @@
 {
-  "name": "angular-horizontal-timeline",
-  "main": ["angular-horizontal-timeline.js","angular-horizontal-timeline.css"],
+  "name": "angular-one-day-timeline",
+  "main": ["angular-one-day-timeline.js","angular-one-day-timeline.css"],
   "version": "0.0.1",
   "authors": [
-    "eowo"
+    "Ilia Glushkov (eliasmamo)"
   ],
-  "description": "Angular JS horizontal timeline",
+  "description": "Angular JS one day timeline",
   "keywords": [
     "angular",
-    "horizontal",
+    "day",
     "timeline"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/eowo/angular-horizontal-timeline",
+  "homepage": "https://github.com/eliasmamo/angular-one-day-timeline",
   "ignore": [
     "**/.*",
     "node_modules",
