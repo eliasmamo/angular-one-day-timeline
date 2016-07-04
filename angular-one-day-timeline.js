@@ -21,7 +21,7 @@ var template =  '<div class="cont">' +
 			      	'</div>' +
 				'</div>';
 
-angular.module('angular-one-day-timeline', ['ngSanitize'])
+angular.module('angular-one-day-timeline', [])
 
 .directive('oneDayTimeline', function(){
 	function controller($scope){
