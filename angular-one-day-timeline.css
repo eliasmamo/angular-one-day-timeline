@@ -1,0 +1,76 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+.cont {
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+/** timeframes */
+.hour-ticks-container {
+  background: #fff;
+  height: 24px;
+  width: 100%;
+  position: relative;
+}
+
+.hour-ticks-container.with-ticks {
+  height: 40px;
+}
+
+.hour-ticks-container .hour-tick {
+  height: 24px;
+  width: 1px;
+  background-color: #ddd;
+  position: absolute;
+  z-index: 1;
+  left: 4.1667%;
+}
+
+.hour-ticks-container .hour-tick span.tick-label {
+  position: absolute;
+  left: -5px;
+  top: 15px;
+  font-size: 10px;
+}
+
+.hour-ticks-container .hour-tick span.tick-label i {
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid #bab9c9;
+  border-right: 5px solid transparent;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+
+.hour-ticks-container .time-period {
+  width: 30%;
+  background-color: #449d44;
+  border: 1px solid #398439;
+  height: 24px;
+  position: absolute;
+}
+
+.hour-ticks-container .timeline-borders {
+  height: 24px;
+  position: absolute;
+  border: 1px solid #ddd;
+  width: 100%;
+  background: #f3f3f3;
+}
+
+/** timeframes end */
